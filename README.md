@@ -5,11 +5,11 @@ Always clone new repositories you work on, which means downloading a copy of the
 
 For example, if you want to clone the above repository, first copy the clone link above. Then, open your terminal, and cd to the location on your local computer where you want to put these files. Type git clone then paste the link as shown below if you want to clone the master branch.
 
-git clone https://github.com/oddaspa/git-course.git
+`$ git clone https://github.com/oddaspa/git-course.git`
 
 If you want to clone a particular branch of this repository, you’d want to do something like this:
 
-git clone https://github.com/oddaspa/git-course.git -b branch-name
+`$ git clone https://github.com/oddaspa/git-course.git -b branch-name`
 
 # Git checkout
 It’s a best practice to create different branches for different features instead of working on the master branch directly. When all features have been deemed to pass certain tests and requirements, then you can merge them into the master branch.
@@ -18,11 +18,11 @@ At different times, you will have to checkout to the particular repository branc
 
 If the branch had already been created:
 
-git checkout branch-name
+`$ git checkout branch-name`
 
 And if you’re just creating the new feature branch:
 
-git checkout -b branch-name
+`$ git checkout -b branch-name`
 
 # Git pull
 Your team or pair programming buddy will change different branches of a repository, and you should always pull these new changes before you start writing code. On your terminal, checkout to the branch you’ll be working on, and run the git pull command. The recent changes will be pulled to your local repository.
@@ -34,17 +34,17 @@ To capture all the files (except those excluded by Git ignore), you will use git
 
 After taking the snapshots, you will then have to commit and save your snapshots to your local repository using the following:
 
-git commit -m ‘commit message’
+`$ git commit -m ‘commit message’`
 
 The commit message should explain the peculiarity of the snapshot you’re saving. For example:
 
-git add index.html
+`$ git add hello-world.html`
 
-git commit -m ‘the form feature button created’
+`$ git commit -m ‘the form feature button created’`
 
 You can do the two together with the && operator as shown below;
 
-git add index.html && git commit -m ‘footer html structure created’
+`$ git add index.html && git commit -m ‘footer html structure created’`
 
 # Git stash and merge
 Simply doing git stash will stash whatever edit you have made to the branch but do not want to commit. That means when waiting on another developer to commit and push their copy of the code, you can experiment with some things in this same branch. Git encourages it. Whenever you’re ready to pull new changes to your local repository, but do not want to merge your own edits to it, you then have to stash your own edits. Git stash will keep the copy somewhere else for you and it’s accessible by doing Git stash list.
@@ -56,7 +56,7 @@ When you’ve checked out to the master branch, git merge development will merge
 # Git push
 Just like saving your snapshots to a Google Photos album for whomever you share the album with, think of git push as sending your local repository to the remote repository for others to access.
 
-git push -u origin branch-name
+`$ git push -u origin branch-name`
 
 While there are other Git commands available for use, it’s interesting what you can achieve by mastering the few that I’ve covered above.
 
